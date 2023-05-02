@@ -1,0 +1,80 @@
+<div>
+  <img src="../assets/img/logo-1.png">
+</div>
+<div [class.flex]="classApplied" [class.hidden]="!classApplied"
+  class="pr-register-box hidden	h-fit text-center bg-white w-fit rounded-lg px-10 py-14 flex-col pr-login"
+>
+  <div class="font-bold pr-title">{{ title }}</div>
+  <p class="pr-description mt-2">برای ثبت نام اطلاعات خود را وارد نمایید</p>
+  <form class="mt-8" (ngSubmit)="register()" [formGroup]="registerForm" novalidate>
+   <p class="flex pr-inputs rounded-lg items-center"> <span class="icon-phone px-3"></span><input class="w-full"
+      type="tel"
+      formControlName="Mobile"
+      placeholder="موبایل *"
+      [attr.maxlength]="11"
+    /></p>
+    <p class="flex pr-inputs rounded-lg mt-3 items-center">
+      <span class="icon-pin px-3"></span>
+      <input class="w-full"
+        type="password"
+        formControlName="Password"
+        placeholder="رمز عبور *"
+      />
+    </p>
+    <p class="flex pr-inputs rounded-lg mt-3 items-center">
+      <span class="icon-pin px-3"></span>
+      <input class="w-full"
+        type="password"
+        formControlName="ConfirmPassword"
+        placeholder="تکرار رمز عبور *"
+      />
+    </p>
+    <span *ngIf="registerForm.errors?.['passwordmatcherror']"
+      >رمز عبور مطابقت ندارد!</span
+    >
+    <!-- <span *ngIf="loginForm.errors?.['mobileerror']"
+      >شماره موبایل به درستی وارد نشده است!</span
+    > -->
+    <button class="mt-6 w-full text-white	rounded-lg" [disabled]="registerForm.invalid">ثبت نام</button>
+  </form>
+</div>
+<div [class.hidden]="classApplied"
+  class="pr-register-box flex	h-fit text-center bg-white w-fit rounded-lg px-10 py-14 flex-col pr-login"
+>
+  <div class="pr-title font-bold">{{ title }}</div>
+  <p class="pr-description mt-2">برای ورود اطلاعات خود را وارد نمایید</p>
+  <form class="mt-8" (ngSubmit)="login()" [formGroup]="loginForm" novalidate>
+   <p class="flex pr-inputs rounded-lg items-center"> <span class="icon-phone px-3"></span><input class="w-full"
+      type="tel"
+      formControlName="Mobile"
+      placeholder="موبایل *"
+      [attr.maxlength]="11"
+    /></p>
+    <p class="flex pr-inputs rounded-lg mt-3 items-center">
+      <span class="icon-pin px-3"></span>
+      <input class="w-full"
+        type="password"
+        formControlName="PasswordLogin"
+        placeholder="رمز عبور *"
+      />
+    </p>
+    <span *ngIf="loginForm.errors?.['passworderror']"
+      >رمز عبور صحیح نیست!</span
+    >
+    <div class="flex gap-2 md:mt-0 lg:mt-0 mt-3">
+      <input type="checkbox">
+      <label>مرا به یاد داشته باش</label>
+    </div>
+    <button (click)="toggleClass()" class="mt-6 w-full text-white	rounded-lg" [disabled]="loginForm.invalid">ورود</button>
+  </form>
+</div>
+<div class="pr-bottom-links flex gap-2">
+  <button (click)="toggleClass()" class="block" [class.hidden]="classApplied">ثبت نام</button>
+  <button (click)="toggleClass()" class="hidden" [class.block]="classApplied" [class.hidden]="!classApplied">ورود</button>
+  |
+  <button class="font-bold" href="#">لغو</button>
+</div>
+  <div class="flex gap-1 pr-bottom-pass flex" [class.hidden]="classApplied">
+    فراموشی رمز عبور؟ 
+    <span class="font-bold">بازیابی رمز</span>
+  </div>

@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("../../fonts/vazir/Vazirmatn-Thin.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("../../fonts/vazir/Vazirmatn-ExtraLight.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("../../fonts/vazir/Vazirmatn-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("../../fonts/vazir/Vazirmatn-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("../../fonts/vazir/Vazirmatn-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("../../fonts/vazir/Vazirmatn-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("../../fonts/vazir/Vazirmatn-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("../../fonts/vazir/Vazirmatn-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("../../fonts/vazir/Vazirmatn-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "icomoon";
+  src: url("../../fonts/icomoon/icomoon.eot?ablzza");
+  src: url("../../fonts/icomoon/icomoon.eot?ablzza#iefix") format("embedded-opentype"), url("../../fonts/icomoon/icomoon.ttf?ablzza") format("truetype"), url("../../fonts/icomoon/icomoon.woff?ablzza") format("woff"), url("../../fonts/icomoon/icomoon.svg?ablzza#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+body {
+  background-color: #f2f6ff;
+  font-family: "Vazirmatn";
+}
+body .pr-description,
+body form,
+body .pr-bottom-links,
+body .pr-bottom-pass {
+  font-size: 0.85rem;
+}
+body .pr-login {
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+  color: #31507d;
+}
+body .pr-login .pr-title {
+  font-size: 1.25rem;
+}
+body .pr-login form .pr-inputs {
+  border: 2px solid #f2f6ff;
+}
+@media (max-width: 480px) {
+  body .pr-login form .pr-inputs input {
+    min-width: 100% !important;
+  }
+}
+body .pr-login form .pr-inputs input {
+  min-height: 44px;
+  min-width: 450px;
+}
+body .pr-login form .pr-inputs input:focus-visible {
+  outline: unset;
+}
+body .pr-login form .pr-inputs .icon-phone:before {
+  content: "\e901";
+  color: #267fff;
+  font-family: "icomoon";
+  font-size: 1rem;
+}
+body .pr-login form .pr-inputs .icon-pin:before {
+  content: "\e900";
+  color: #267fff;
+  font-family: "icomoon";
+  font-size: 1rem;
+}
+body .pr-login form button {
+  min-height: 44px;
+  background-color: #267fff;
+}
+body .pr-login form button[disabled] {
+  background-color: gray;
+}
+body .pr-bottom-links button:last-child {
+  color: #267fff;
+}
+body .pr-bottom-pass span {
+  color: #267fff;
+}/*# sourceMappingURL=styles.css.map */

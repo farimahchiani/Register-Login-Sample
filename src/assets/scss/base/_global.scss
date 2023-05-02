@@ -1,0 +1,63 @@
+body {
+  background-color: $bg-color;
+  font-family: "Vazirmatn";
+  .pr-description,
+  form,
+  .pr-bottom-links,
+  .pr-bottom-pass {
+    font-size: 0.85rem;
+  }
+  .pr-login {
+    box-shadow: $bx-shodow;
+    color: $color-accent1;
+    .pr-title {
+      font-size: 1.25rem;
+    }
+    form {
+      .pr-inputs {
+        border: 2px solid $bg-color;
+        @media (max-width: 480px) {
+          input {
+            min-width: 100% !important;
+          }
+        }
+        input {
+          min-height: 44px;
+          min-width: 450px;
+        }
+        input:focus-visible {
+          outline: unset;
+        }
+        .icon-phone:before {
+          content: "\e901";
+          color: $color-accent2;
+          font-family: "icomoon";
+          font-size: 1rem;
+        }
+        .icon-pin:before {
+          content: "\e900";
+          color: $color-accent2;
+          font-family: "icomoon";
+          font-size: 1rem;
+        }
+      }
+      button {
+        min-height: 44px;
+        background-color: $color-accent2;
+      }
+      button[disabled] {
+        background-color: gray;
+      }
+    }
+  }
+  .pr-bottom-links {
+    button:last-child {
+      color: $color-accent2;
+    }
+  }
+  .pr-bottom-pass {
+    span {
+      color: $color-accent2;
+    }
+  }
+}
